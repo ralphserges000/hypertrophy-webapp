@@ -1,0 +1,10 @@
+.vscode
+.mvn
+.DS_Store
+.env
+mvnw
+mvnw.cmd
+
+target/
+Diagram 2023-12-30 09-12-17.uxf
+src/main/resources
