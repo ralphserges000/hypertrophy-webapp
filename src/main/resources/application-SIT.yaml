@@ -1,0 +1,15 @@
+hypertrophy:
+    security:
+        jwt:
+            secretkey: ${JWT_SECRET_KEY}
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}:27017/${DB_NAME}?authSource=admin
+
+logging:
+  level:
+    org:
+      springframework:
+        web: INFO
