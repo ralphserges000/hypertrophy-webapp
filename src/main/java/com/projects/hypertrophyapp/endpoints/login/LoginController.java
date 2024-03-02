@@ -13,7 +13,6 @@ import com.projects.hypertrophyapp.security.jwt.JwtIssuer;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
@@ -25,7 +24,6 @@ public class LoginController {
     private final AuthenticationManager authManager;
 
     @PostMapping("/auth/login")
-    @CrossOrigin(origins = "http://localhost:4200")
     public LoginResponse login(@RequestBody LoginRequest loginReq, HttpServletResponse response) {
 
         var authentication = authManager.authenticate(new UsernamePasswordAuthenticationToken(loginReq.getUsername(), loginReq.getPassword()));

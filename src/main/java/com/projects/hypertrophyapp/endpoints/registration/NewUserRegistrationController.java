@@ -7,7 +7,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -21,7 +20,6 @@ public class NewUserRegistrationController {
     
 
     @PostMapping("/users/registration")
-    @CrossOrigin(origins = "http://localhost:4200")
     public ResponseEntity<PublicFacingUserEntity> createNewUser(@RequestBody PrivateUserEntity newUser) {
         
         if(!repo.findUserByUsername(newUser.getUsername()).isEmpty()) {
