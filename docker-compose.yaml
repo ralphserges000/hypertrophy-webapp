@@ -7,20 +7,19 @@ services:
     environment:
       DB_USERNAME: ${DB_USERNAME}
       DB_NAME: ${DB_NAME}
-      DB_HOST: ${DB_HOST}
+      DB_HOST: mongodb
       SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE}
       DB_PASSWORD: ${DB_PASSWORD}
       JWT_SECRET_KEY: ${JWT_SECRET_KEY}
 
   db:
+    container_name: mongodb
     image: mongo:latest
     ports:
       - 27017:27017
     volumes:
-      - myvolume_test:/data/db
+      - ./data:/data/db
+      - ./${MONGO_BACKUP_PATH}:${MONGO_BACKUP_PATH}
+    
     command: [--auth]
-
-volumes:
-  myvolume_test:
-    external: true
 
