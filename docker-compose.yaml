@@ -20,6 +20,4 @@ services:
     volumes:
       - ./data:/data/db
       - ./${MONGO_BACKUP_PATH}:${MONGO_BACKUP_PATH}
-    
-    command: [--auth]
-
+    command: [--auth] 
