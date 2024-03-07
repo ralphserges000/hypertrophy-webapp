@@ -16,5 +16,4 @@ import lombok.Setter;
 public class WorkoutSetRequest {
     private String routineId;
     private Set<WorkoutSet> allSetsInARoutine;
-
 }

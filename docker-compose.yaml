@@ -3,7 +3,7 @@ services:
   api:
     build: .
     ports:
-      - 8080:8080
+      - 5342:8080
     environment:
       DB_USERNAME: ${DB_USERNAME}
       DB_NAME: ${DB_NAME}
