@@ -6,9 +6,8 @@ mvnw
 mvnw.cmd
 
 target/
-Diagram 2023-12-30 09-12-17.uxf
 
-src/main/resources
+!src/main/resources/*.yaml
 data/
 mongo_backup/
 
